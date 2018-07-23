@@ -1,11 +1,14 @@
 # Blog Angular
-Install Bootstrap
+#Install Bootstrap
+<pre >
+
 
 npm install jquery --save 
 npm install popper.js --save
 npm install bootstrap@4 jquery --save
-<pre >
+
 register css and js in angular.json 
+
 "styles": [
     "src/styles.css",
     "node_modules/bootstrap/dist/css/bootstrap.min.css"
