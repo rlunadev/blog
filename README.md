@@ -19,3 +19,13 @@ register css and js in angular.json
     "node_modules/bootstrap/dist/js/bootstrap.min.js"
 ]
 </pre>
+
+<h2> Requeriments </h2>
+
+<ul>
+  <li>Home</li>
+  <li>Articles</li>
+  <li>Categories</li>
+  <li>Profile</li>
+  <li>Users</li>
+</ul>
