@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <table>
+        <thead>
+            <tr>
+                <td><input type="checkbox" name="select-all" id="select-all" /></td>
+                <td style="text-align: left">Name</td>
+                <td style="text-align: left">Created By</td>
+                <td style="text-align: left">Created Date</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="post">
+                <td>
+                    <p><input Length="0" name="314" type="checkbox" value="true" /><input name="314" type="hidden" value="false" /></p>
+                </td>
+                <td>Window</td>
+                <td>John</td>
+                <td>01/01/2014 12:00:00 AM</td>
+            </tr>
+            <tr class="post">
+                <td>
+                    <p><input Length="0" name="314" type="checkbox" value="true" /><input name="314" type="hidden" value="false" /></p>
+                </td>
+                <td>Door</td>
+                <td>Chris</td>
+                <td>01/01/2014 12:00:00 AM</td>
+            </tr>
+            <tr class="post">
+                <td>
+                    <p><input Length="0" name="314" type="checkbox" value="true" /><input name="314" type="hidden" value="false" /></p>
+                </td>
+                <td>Floor</td>
+                <td>Michael</td>
+                <td>01/01/2014 12:00:00 AM</td>
+            </tr>
+            <tr class="post">
+                <td>
+                    <p><input Length="0" name="314" type="checkbox" value="true" /><input name="314" type="hidden" value="false" /></p>
+                </td>
+                <td>Car</td>
+                <td>James</td>
+                <td>01/01/2014 12:00:00 AM</td>
+            </tr>
+            <tr class="post">
+                <td>
+                    <p><input Length="0" name="314" type="checkbox" value="true" /><input name="314" type="hidden" value="false" /></p>
+                </td>
+                <td>Bike</td>
+                <td>Steven</td>
+                <td>01/01/2014 12:00:00 AM</td>
+            </tr>
+        </tbody>
+    </table>
+    <div class="pagination-page"></div>
+</body>
+
+<script>
+    jQuery(function($) {
+        var items = $("table tbody tr");
+        var numItems = items.length;
+        var perPage = 4;
+
+        items.slice(perPage).hide();
+
+        // Now setup the pagination using the `.pagination-page` div.
+        $(".pagination-page").pagination({
+            items: numItems,
+            itemsOnPage: perPage,
+
+            // This is the actual page changing functionality.
+            onPageClick: function(pageNumber) {
+                // We need to show and hide `tr`s appropriately.
+                var showFrom = perPage * (pageNumber - 1);
+                var showTo = showFrom + perPage;
+
+                // We'll first hide everything...
+                items.hide()
+                    // ... and then only show the appropriate rows.
+                    .slice(showFrom, showTo).show();
+            }
+        });
+
+        function checkFragment() {
+            // If there's no hash, treat it like page 1.
+            var hash = window.location.hash || "#page-1";
+
+            // We'll use a regular expression to check the hash string.
+            hash = hash.match(/^#page-(\d+)$/);
+
+            if (hash) {
+                // The `selectPage` function is described in the documentation.
+                // We've captured the page number in a regex group: `(\d+)`.
+                $(".pagination-page").pagination("selectPage", parseInt(hash[1]));
+            }
+        };
+
+        // We'll call this function whenever back/forward is pressed...
+        $(window).bind("popstate", checkFragment);
+
+        // ... and we'll also call it when the page has loaded
+        // (which is right now).
+        checkFragment();
+
+
+
+    });
+</script>
+
+</html>
