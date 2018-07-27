@@ -1,4 +1,8 @@
 # Blog Angular
+<h2> run app </h2>
+npm install <br />
+ng serve
+
 <h2> Install bootstrap 4 </h2>
 <pre >
 npm install jquery --save 
