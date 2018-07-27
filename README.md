@@ -1,8 +1,6 @@
 # Blog Angular
-# Install Bootstrap
+<h2> Install bootstrap 4 </h2>
 <pre >
-
-
 npm install jquery --save 
 npm install popper.js --save
 npm install bootstrap@4 jquery --save
@@ -29,3 +27,6 @@ register css and js in angular.json
   <li>Profile</li>
   <li>Users</li>
 </ul>
+
+<h2> Server </h2>
+localhost:port/api/values/:id
