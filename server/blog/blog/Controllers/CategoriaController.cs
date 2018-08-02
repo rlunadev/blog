@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using blog.Data;
 using blog.Models;
+using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
 
 namespace blog.Controllers
@@ -14,10 +15,10 @@ namespace blog.Controllers
         Repository _repository = Repository.Instance;
         // GET api/categoria
         [HttpGet]
+        // [EnableCors("AllowSpecificOrigin")]
         public IEnumerable<Categoria> Get()
         {
             return _repository.GetAllCategorias();
-            //return new string[] { "status", "ok" };
         }
 
         // GET api/categoria/5
