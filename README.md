@@ -33,4 +33,4 @@ register css and js in angular.json
 </ul>
 
 <h2> Server </h2>
-localhost:port/api/values/:id
+localhost:port/api/categorias/:id
