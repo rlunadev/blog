@@ -5,6 +5,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppComponent } from './app.component';
 import { CategoriasComponent } from './template/categorias/categorias.component';
 import { CategoriasService } from './services/categorias.service';
+// routes
+import { APP_ROUTING } from './app.routes';
 
 @NgModule({
   declarations: [
@@ -13,7 +15,8 @@ import { CategoriasService } from './services/categorias.service';
   ],
   imports: [
     BrowserModule,
-    HttpClientModule
+    HttpClientModule,
+    APP_ROUTING
   ],
   providers: [
     CategoriasService
