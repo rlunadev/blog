@@ -19,7 +19,7 @@ export class CategoriasService {
     }
 }
 
-export interface Categoria {
+export class /*interface*/ Categoria {
   id: string;
   titulo: string;
   texto: string;
