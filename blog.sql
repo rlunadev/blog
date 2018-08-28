@@ -1,3 +1,8 @@
+
+if not exists (select * from sys.databases where name = N'blog')
+    begin
+        create database [blog]
+    end;
 use blog
 
 if not exists(select * from sys.tables where name='Categorias')
