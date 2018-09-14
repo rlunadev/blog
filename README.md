@@ -1,8 +1,9 @@
 # Blog Angular
-<h2> run app </h2>
+<h2> run ui </h2>
 npm install <br />
-ng serve
-
+ng serve -o
+<h2> run serve </h2>
+use Visual Studio 2017 released after march 2018
 <h2> Install bootstrap 4 </h2>
 <pre >
 npm install jquery --save 
