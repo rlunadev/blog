@@ -3,7 +3,8 @@
 npm install <br />
 ng serve -o
 <h2> run serve </h2>
-use Visual Studio 2017 released after march 2018
+use Visual Studio 2017 released after march 2018 <br>
+for comments of posts we use Disqss
 <h2> Install bootstrap 4 </h2>
 <pre >
 npm install jquery --save 
