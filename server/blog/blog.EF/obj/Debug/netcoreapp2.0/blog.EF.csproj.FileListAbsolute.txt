@@ -8,3 +8,4 @@ C:\ANGULAR\blog\server\blog\blog.EF\obj\Debug\netcoreapp2.0\blog.EF.AssemblyInfo
 C:\ANGULAR\blog\server\blog\blog.EF\obj\Debug\netcoreapp2.0\blog.EF.AssemblyInfo.cs
 C:\ANGULAR\blog\server\blog\blog.EF\obj\Debug\netcoreapp2.0\blog.EF.dll
 C:\ANGULAR\blog\server\blog\blog.EF\obj\Debug\netcoreapp2.0\blog.EF.pdb
+C:\ANGULAR\blog\server\blog\blog.EF\obj\Debug\netcoreapp2.0\blog.EF.csprojAssemblyReference.cache

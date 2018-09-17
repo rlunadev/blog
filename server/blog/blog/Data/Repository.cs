@@ -4,6 +4,7 @@ using blog.Models;
 using FluentNHibernate.Cfg;
 using FluentNHibernate.Cfg.Db;
 using NHibernate;
+using NHibernate.Cfg;
 
 namespace blog.Data
 {
@@ -16,7 +17,15 @@ namespace blog.Data
 
     private Repository()
     {
-      InitializeSession();
+      try
+      {
+        InitializeSession();
+      }
+      catch (Exception err)
+      {
+        throw err;
+      }
+      
     }
 
     public static Repository Instance
@@ -31,9 +40,11 @@ namespace blog.Data
     {
       try
       {
+        string conexionString = ConfigurationManager.AppSetting["ConnectionStrings:Database1"];
         _sessionFactory = Fluently.Configure()
             .Database(MsSqlConfiguration.MsSql2012
-            .ConnectionString("Server=IATEC-4X2KWF2\\MSSQLSERVER2; Database=blog; Integrated Security=SSPI;"))
+            .ConnectionString(conexionString))
+            
             .Mappings(m => m
             .FluentMappings.AddFromAssemblyOf<Repository>())
             .BuildSessionFactory();

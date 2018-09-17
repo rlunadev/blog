@@ -5,6 +5,12 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Mapping\PostMap.cs" />
+    <Compile Remove="Mapping\PostTagsMap.cs" />
+    <Compile Remove="Mapping\UsuarioPerfilMap.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Folder Include="wwwroot\" />
   </ItemGroup>
 

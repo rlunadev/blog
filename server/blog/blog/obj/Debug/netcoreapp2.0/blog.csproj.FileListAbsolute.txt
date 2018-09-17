@@ -8,4 +8,3 @@ C:\ANGULAR\blog\server\blog\blog\obj\Debug\netcoreapp2.0\blog.AssemblyInfoInputs
 C:\ANGULAR\blog\server\blog\blog\obj\Debug\netcoreapp2.0\blog.AssemblyInfo.cs
 C:\ANGULAR\blog\server\blog\blog\obj\Debug\netcoreapp2.0\blog.dll
 C:\ANGULAR\blog\server\blog\blog\obj\Debug\netcoreapp2.0\blog.pdb
-C:\ANGULAR\blog\server\blog\blog\obj\Debug\netcoreapp2.0\blog.csprojResolveAssemblyReference.cache
