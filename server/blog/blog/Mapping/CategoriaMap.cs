@@ -16,6 +16,10 @@ namespace blog.Mapping
         Map(x => x.Texto);
         Map(x => x.Fecha);
         Map(x => x.Estado);
+      References(x => x.Usuario)
+        .Column("UsuarioId")
+        .Cascade.All();
+
         Table("Categorias");
       }
     }
